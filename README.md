@@ -9,3 +9,17 @@
 # To be aware ofs
 
 1. CityGen3D creates terrain + other objects (buildings, roads, sidewalks, etc.), but [RobotecGPULidar](https://github.com/RobotecAI/RobotecGPULidar), wonts see through the terrain. As a workaround, use terrain -> mesh converter hosted in [this gist](https://gist.github.com/jediofgever/cdc5471bd8faa390fab032719d134ee1). 
+
+# Export Road network from MapRoads of CityGen3D
+
+Use Unity's FBX expoerter to export MapRoads to .fbx file (in binary format). 
+Unfourtunately it is a tedious task to work with .fbx files in Linux, blender is a good choice as Meshlab and CloudCompare cannot handle .fbx very well.  
+
+Transfer this .fbx -> .obj using preferably blender or an online tool.  
+
+Finally use CloudCompare to sample colored pointcloud on the .obj mesh. 
+
+There you have semantically labeled road network as depicted in the pic. 
+
+![plot](/img/img.png)
+
