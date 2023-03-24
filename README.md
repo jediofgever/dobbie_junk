@@ -10,6 +10,8 @@
 
 1. CityGen3D creates terrain + other objects (buildings, roads, sidewalks, etc.), but [RobotecGPULidar](https://github.com/RobotecAI/RobotecGPULidar), wonts see through the terrain. As a workaround, use terrain -> mesh converter hosted in [this gist](https://gist.github.com/jediofgever/cdc5471bd8faa390fab032719d134ee1). 
 
+2. CityGen3D generated meshes are not enabled for read/write. Change all `isReadable:0` tags to `1`.
+
 # Export Road network from MapRoads of CityGen3D
 
 Use Unity's FBX expoerter to export MapRoads to .fbx file (in binary format). 
